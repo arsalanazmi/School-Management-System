@@ -1,38 +1,105 @@
-.App {
-  text-align: center;
+body{
+    background: url('./Images/Background.jpg') no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+h1, h2{
+  color:white;
+  text-decoration: underline;
+}
+.form{
+  background-color: rgb(223, 223, 223,0.5); 
+  padding:15px 0 25px 0 ;
+  border-radius: 15px;
+  margin-bottom:20px;
+}
+.Form{
+  background-color: rgb(223, 223, 223,0.4);
+  padding:15px 0 10px 0;
+  border-radius: 15px;
+  margin-bottom:20px;
+}
+a{
+  color:white !important;
+}
+button{
+  width:100%;
+}
+.round{
+  border-radius: 20px !important;
+}
+.serial_no{
+  width:1%;
+}
+.logout{
+  margin:auto;
+  position: absolute !important;
+  left: 0;
+  right: 0;
+}
+/* Darker background-color on hover */
+tr:hover {
+  background: rgb(128, 127, 127);
+}
+td:hover {
+  background: rgb(143, 143, 143);
+  cursor: cell;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Button Animation */
+.btn {
+  position: relative;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+ .btn:after {
+  content: "";
+  display: block;
+  position: absolute;
+  padding-top: 300%;
+  padding-left: 350%;
+  margin-left: -20px!important;
+  margin-top: -120%;
+  opacity: 0;
+  transition: all 0.8s
+}
+.btn:active:after {
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s
+}
+.submit:after{
+  background: rgb(142, 232, 248);
+}
+.update:after{
+  background: #90EE90;
+}
+.edit:after{
+  background: rgb(165, 236, 248);
+}
+.delete:after{
+  background: rgb(245, 178, 178);
+} 
+/* Extra small devices (phones, 300px and down) */
+@media only screen  and (min-width: 250px) and (max-width: 300px){
+  h1{
+    font-size: 32px !important;
+  }
+  h2{
+    font-size: 26px !important;
   }
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media only screen and (max-width: 249px){
+  h1{
+    font-size: 26px !important;
   }
-  to {
-    transform: rotate(360deg);
+  h2{
+    font-size: 22px !important;
   }
 }
