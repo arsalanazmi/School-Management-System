@@ -58,6 +58,10 @@ class SignUp extends Component {
   handleSubmit = (event) => {
     event.preventDefault();
     
+    if (this.state.Password.length < 6){
+      alert("Password should be atleast 6 characters")
+    }
+    
     this.props.SignUp({
       Email: this.state.Email,
       Password: this.state.Password,
