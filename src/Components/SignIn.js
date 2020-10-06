@@ -7,7 +7,6 @@ import AuthMiddleware from "./../Store/Middleware/AuthMiddleware";
 function mapStateToProps(state) {
   return {
     isAuthenticated: state.AuthReducer.isAuthenticated,
-    isError: state.AuthReducer.isError
   };
 }
 function mapDispatchToProps(dispatch) {
@@ -23,7 +22,6 @@ class SignIn extends Component {
       Email: "",
       Password: "",
       isAuthenticated: false,
-      isError: false
     };
   }
 
@@ -47,10 +45,6 @@ class SignIn extends Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
-
-    if (this.props.isError === this.state.isError){
-      alert("Incorrect Password!")
-    }
 
     this.props.signin({
       Email: this.state.Email,
