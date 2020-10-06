@@ -41,10 +41,10 @@ button{
 }
 /* Darker background-color on hover */
 tr:hover {
-  background: rgb(128, 127, 127);
+  background: rgb(128, 127, 127) !important;
 }
 td:hover {
-  background: rgb(143, 143, 143);
+  background: rgb(204, 204, 204);
   cursor: cell;
 }
 
